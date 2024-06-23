@@ -7,7 +7,7 @@ interface appSliceInitialStateType {
 
 const initialState: appSliceInitialStateType = {
   count: 0,
-  countNumber: 1,
+  countNumber: 5,
 };
 
 const appSlice = createSlice({
@@ -15,10 +15,10 @@ const appSlice = createSlice({
   initialState,
   reducers: {
     increaseCount: (state) => {
-      state.count++;
+      state.count += Number(state.countNumber);
     },
     decreaseCount: (state) => {
-      state.count--;
+      state.count = Number(state.countNumber);
     },
     countByNumber: (state, action) => {
       state.countNumber = action.payload;

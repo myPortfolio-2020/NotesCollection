@@ -7,7 +7,7 @@ import {
 } from "./redux/slices/appSlice";
 import { RootState } from "./redux/store";
 
-const Index = () => {
+const Index: any = () => {
   const dispatch = useDispatch();
   const count = useSelector((state: RootState) => state.appReducer.count);
   const countNumber = useSelector(
@@ -23,7 +23,11 @@ const Index = () => {
     >
       <Text>count={count}</Text>
       <View>
-        <TextInput style={styles.inputStyle} value="5" />
+        <TextInput
+          style={styles.inputStyle}
+          value={countNumber}
+          onChange={(e) => dispatch(countByNumber(e.target.value))}
+        />
       </View>
       <Text onPress={() => dispatch(increaseCount())}>Increase</Text>
       <Text onPress={() => dispatch(decreaseCount())}>Decrease</Text>
