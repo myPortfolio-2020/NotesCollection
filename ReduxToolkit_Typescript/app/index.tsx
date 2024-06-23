@@ -1,6 +1,9 @@
-import { Text, View } from "react-native";
+import { Button, Text, View } from "react-native";
+import { useDispatch } from "react-redux";
+import { decreaseCount, increaseCount } from "./redux/slices/appSlice";
 
 export default function Index() {
+  const dispatch = useDispatch();
   return (
     <View
       style={{
@@ -9,7 +12,9 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text>count={0}</Text>
+      <Text onPress={() => dispatch(increaseCount())}>Increase</Text>
+      <Text onPress={() => dispatch(decreaseCount())}>Decrease</Text>
     </View>
   );
 }
