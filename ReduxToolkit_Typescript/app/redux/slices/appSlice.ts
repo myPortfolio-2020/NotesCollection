@@ -18,7 +18,7 @@ const appSlice = createSlice({
       state.count += Number(state.countNumber);
     },
     decreaseCount: (state) => {
-      state.count = Number(state.countNumber);
+      state.count -= Number(state.countNumber);
     },
     countByNumber: (state, action) => {
       state.countNumber = action.payload;
