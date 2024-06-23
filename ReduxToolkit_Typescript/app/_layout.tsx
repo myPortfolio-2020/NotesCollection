@@ -11,3 +11,5 @@ export default function RootLayout() {
     </Provider>
   );
 }
+
+// tutorial: https://www.youtube.com/watch?v=FBgW19Gofnk
