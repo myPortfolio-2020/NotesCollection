@@ -1,7 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  count: 12,
+interface appSliceInitialStateType {
+  count: number;
+}
+
+const initialState: appSliceInitialStateType = {
+  count: 0,
 };
 
 const appSlice = createSlice({

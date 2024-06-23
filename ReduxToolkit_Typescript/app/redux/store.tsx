@@ -6,3 +6,5 @@ export const store = configureStore({
     appReducer: appSlice,
   },
 });
+
+export type RootState = ReturnType<typeof store.getState>;
