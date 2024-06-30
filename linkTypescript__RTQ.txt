@@ -1,0 +1,5 @@
+Code Soni
+---------------------------------------------------------------------------------------------
+Redux Toolkit Ultimate Crash Course in 2024 | Redux Async Thunk, RTK Query, State Management
+https://www.youtube.com/watch?v=FBgW19Gofnk&t=4359s
+_____________________________________________________________________________________________
