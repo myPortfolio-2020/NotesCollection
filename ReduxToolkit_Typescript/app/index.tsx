@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 // import { Button, Text, View, TextInput, StyleSheet } from "react-native";
 // import { useDispatch, useSelector } from "react-redux";
 // import {
@@ -66,6 +67,45 @@ const index = () => {
 
       <TouchableOpacity onPress={handlerPress}>on press</TouchableOpacity>
     </View>
+=======
+import { Button, Text, View, TextInput, StyleSheet } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  decreaseCount,
+  increaseCount,
+  countByNumber,
+} from "./redux/slices/appSlice";
+import { RootState } from "./redux/store";
+import NewCompTypescript from "@/components/NewCompTypescript";
+
+const Index: any = () => {
+  const dispatch = useDispatch();
+  const count = useSelector((state: RootState) => state.appReducer.count);
+  const number = useSelector(
+    (state: RootState) => state.appReducer.number
+  );
+  return (
+    // <View
+    //   style={{
+    //     flex: 1,
+    //     justifyContent: "center",
+    //     alignItems: "center",
+    //   }}
+    // >
+    //   <Text>count={count}</Text>
+    //   <View>
+    //     <TextInput
+    //      type='number'
+    //       style={styles.inputStyle}
+    //       value={number}          
+    //       onChangeText={(e) => dispatch(countByNumber(e.target.value))}
+    //     />
+    //   </View>
+    //   <Text onPress={() => dispatch(increaseCount())}>Increase</Text>
+    //   <Text onPress={() => dispatch(decreaseCount())}>Decrease</Text>
+    // </View>
+    <NewCompTypescript/>
+>>>>>>> Stashed changes
   );
 };
 

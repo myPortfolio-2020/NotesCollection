@@ -2,12 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 
 interface appSliceInitialStateType {
   count: number;
-  countNumber: number;
+  number: number;
 }
 
 const initialState: appSliceInitialStateType = {
   count: 0,
-  countNumber: 5,
+  number: 5,
 };
 
 const appSlice = createSlice({
@@ -15,13 +15,13 @@ const appSlice = createSlice({
   initialState,
   reducers: {
     increaseCount: (state) => {
-      state.count += Number(state.countNumber);
+      state.count += Number(state.number);
     },
     decreaseCount: (state) => {
-      state.count -= Number(state.countNumber);
+      state.count -= Number(state.number);
     },
     countByNumber: (state, action) => {
-      state.countNumber = action.payload;
+      state.number = action.payload;
     },
   },
 });
